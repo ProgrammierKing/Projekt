@@ -1,0 +1,59 @@
+•	Actors können jetzt relativ einfach auch während der Simulation erzeugt und im View angezeigt werden. (Beispiel im Ordner "sample sources")
+
+•	In der Klasse TheObject wurde die Queue" stationsToGo (/** all the station (labels) where the object have to go to*/)" durch eine Arraylist ersetzt,
+	dadurch haben wir jetzt nicht mehr das Problem, daß wir die Liste kopieren müssen wenn wir mehrere gleiche Objekte erzeugen wollen.
+	
+•	Die Struktur der View Klassen wurde verändert. Die Superklasse "ActorView extends JLabel" wurde rausgenommen. Dies war ein Schwachpunkt,
+	da alle erbenden Klassen immer ein JLabel waren. Jetzt können auch andere GUI Komponenten wie z.B. Progressbar, Panels, etc. relativ einfach dem SimulationsView zugefügt werden.
+	(Beispiel für einen "QueueView" mit JProgressiveBar im Ordner "sample sources")
+
+•	Die Factory wurde so geändert, dass die Queues der Stationen nicht mehr im Konstruktor der jeweiligen Station erzeugt werden, sondern direkt in der Factory.
+	Die Positionen der Queues werden jetzt in den betreffenden XML Files angegeben und nicht mehr generisch im Code "errechnet", was ja schon immer etwas "unschön" war.
+	Der Knoten " <inqueues></inqueues>" für die Anzahl der Queues, wurde damit überflüssig und folglich entfernt.
+	
+		Zur Veranschaulichung hier ein Auszug aus station.xml alt:
+
+                <station>
+                               <label>Station_2</label>
+                               <inqueues>2</inqueues>    -> wurde entfernt
+                               <troughput>1</troughput>
+                               <x_position>350</x_position>
+                               <y_position>350</y_position>
+                               <view>
+                                               <image>station.png</image>
+                               </view>
+                </station>
+
+		Auszug aus station.xml neu:
+
+                <station>
+                               <label>Station_2</label>
+                               <troughput>1</troughput>
+                               <x_position>350</x_position>
+                               <y_position>350</y_position>
+                               <view>
+                                               <image>station.png</image>
+                               </view>
+                               <inqueue>
+                                               <x_position>330</x_position>
+                                               <y_position>310</y_position>
+                               </inqueue>
+                               <inqueue>
+                                               <x_position>370</x_position>
+                                               <y_position>310</y_position>
+                               </inqueue>
+                               <outqueue>
+                                               <x_position>370</x_position>
+                                               <y_position>430</y_position>
+                               </outqueue>
+                </station>
+	
+
+•	"actualStation" Bug in TheObject.java -> private void enterInQueue(Station station) behoben
+
+•	Die Klasse SimpleProcessStation (erbt von SimpleStation) wurde hinzugefügt. Die Factory und die XML Files wurden entsprechend verändert.
+
+
+
+
+

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<settings>
+	<station>
+		<label>Simple_Process_Station_1</label>
+		<troughput>1</troughput>
+		<x_position>500</x_position>
+		<y_position>100</y_position>
+		<view>
+			<image>simple_proccess_station.png</image>
+		</view>
+		<inqueue>
+			<x_position>520</x_position>
+			<y_position>40</y_position>
+		</inqueue>
+		<outqueue>
+			<x_position>520</x_position>
+			<y_position>180</y_position>
+		</outqueue>
+	</station>
+	<station>
+		<label>Simple_Process_Station_2</label>
+		<troughput>4</troughput>
+		<x_position>350</x_position>
+		<y_position>350</y_position>
+		<view>
+			<image>simple_proccess_station.png</image>
+		</view>
+		<inqueue>
+			<x_position>370</x_position>
+			<y_position>290</y_position>
+		</inqueue>
+		<outqueue>
+			<x_position>370</x_position>
+			<y_position>430</y_position>
+		</outqueue>
+	</station>
+</settings>

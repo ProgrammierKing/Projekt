@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<settings>
+	<end_station>
+		<label>End_Station</label>
+		<x_position>700</x_position>
+		<y_position>300</y_position>
+		<view>
+			<image>endstation.png</image>
+		</view>
+		<inqueue>
+			<x_position>720</x_position>
+			<y_position>260</y_position>
+		</inqueue>
+		<outqueue>
+			<x_position>720</x_position>
+			<y_position>380</y_position>
+		</outqueue>
+	</end_station>
+</settings>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<settings>
+	<station>
+		<label>Process_Station_1</label>
+		<troughput>2</troughput>
+		<x_position>200</x_position>
+		<y_position>100</y_position>
+		<view>
+			<image>process_station.png</image>
+		</view>
+		<inqueue>
+			<x_position>180</x_position>
+			<y_position>40</y_position>
+		</inqueue>
+		<inqueue>
+			<x_position>220</x_position>
+			<y_position>40</y_position>
+		</inqueue>
+		<inqueue>
+			<x_position>260</x_position>
+			<y_position>40</y_position>
+		</inqueue>
+		<outqueue>
+			<x_position>220</x_position>
+			<y_position>180</y_position>
+		</outqueue>
+	</station>
+	
+</settings>
